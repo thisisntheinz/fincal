@@ -1,23 +1,23 @@
-import { DataSource, CollectionViewer } from '@angular/cdk/collections';
-import { Transaction } from './transaction';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { FilterConfig } from './filter-config';
+import { DataSource, CollectionViewer } from '@angular/cdk/collections';
+import { ForecastEvent } from './forecast-event';
 
-export class TransactionDataSource extends DataSource<Transaction> {
-  constructor(private _data: Transaction[]) {
+export class ForecastEventDataSource extends DataSource<ForecastEvent> {
+  constructor(private _data: ForecastEvent[]) {
     super();
     this.load(_data);
   }
-  _transactions = new BehaviorSubject<Transaction[]>([]);
-  public load(transactions: Transaction[]) {
-    this._data = transactions;
-    this._transactions.next(transactions);
+  _ForecastEvents = new BehaviorSubject<ForecastEvent[]>([]);
+  public load(ForecastEvents: ForecastEvent[]) {
+    this._data = ForecastEvents;
+    this._ForecastEvents.next(ForecastEvents);
   }
   public filter(filterConfig: FilterConfig) {
-    this._transactions.next(this._data.filter(d => filterConfig.IsDisplayed(d)));
+    this._ForecastEvents.next(this._data.filter(d => filterConfig.IsDisplayed(d)));
   }
-  connect(collectionViewer: CollectionViewer): Observable<Transaction[] | ReadonlyArray<Transaction>> {
-    return this._transactions;
+  connect(collectionViewer: CollectionViewer): Observable<ForecastEvent[] | ReadonlyArray<ForecastEvent>> {
+    return this._ForecastEvents;
   }
   disconnect(collectionViewer: CollectionViewer): void {
     // not sure!

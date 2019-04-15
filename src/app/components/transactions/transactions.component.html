@@ -1,0 +1,8 @@
+<p>
+  {{ this.transactions.length }} transactions works!
+</p>
+<ul>
+  <li *ngFor="let transaction of transactions">
+    {{ transaction.description }}
+  </li>
+</ul>

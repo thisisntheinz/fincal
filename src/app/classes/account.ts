@@ -12,4 +12,7 @@ export class Account {
   plan: Calendar;
   projection: ProjectedTransaction[];
   APR: number;
+  toString(): string {
+    return this.name;
+  }
 }

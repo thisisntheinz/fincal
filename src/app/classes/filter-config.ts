@@ -1,10 +1,10 @@
-import { Transaction } from './transaction';
 import { FilterConfigInterface } from '../interfaces/filter-config.interface';
+import { ForecastEvent } from './forecast-event';
 export class FilterConfig implements FilterConfigInterface {
   public NegativeBalance = false;
-  public IsDisplayed(transaction: Transaction): boolean {
+  public IsDisplayed(forecastEvent: ForecastEvent): boolean {
     let result = true;
-    if (this.NegativeBalance && (transaction.Balance >= 0)) {
+    if (this.NegativeBalance && (forecastEvent.balance >= 0)) {
       result = false;
     }
     return result;

@@ -4,7 +4,7 @@ import { environment } from '../../../environments/environment';
 
 import {
   GoogleApiModule,
-  GoogleApiServic,
+  GoogleApiService,
   GoogleAuthService,
   NgGapiClientConfig,
   NG_GAPI_CONFIG,
@@ -16,7 +16,7 @@ const gapiConfig: NgGapiClientConfig = {
   discoveryDocs: ['https://analyticsreporting.googleapis.com/$discovery/rest?version=v4'],
   scope: [
     'https://www.googleapis.com/auth/calendar.readonly'
-  ].join(' ');
+  ].join(' ')
 };
 
 @NgModule({
