@@ -12,17 +12,17 @@ export class ForecastEventComponent implements OnInit {
   constructor() { }
 
   @Input()
-  forecastEvent: ForecastEvent | null;
+  event: ForecastEvent | null;
 
   ngOnInit() {
-    if (this.forecastEvent == null) {
-      this.forecastEvent = new ForecastEvent();
-      this.forecastEvent.transactions = [
+    if (this.event == null) {
+      this.event = new ForecastEvent();
+      this.event.transactions = [
         new Transaction('test 1'),
         new Transaction('test 2')
       ];
-      this.forecastEvent.balance = 1.11;
-      this.forecastEvent.when = new Date();
+      this.event.balance = 1.11;
+      this.event.when = new Date();
     }
   }
 }

@@ -3,6 +3,6 @@
 </p>
 <ul>
   <li *ngFor="let transaction of transactions">
-    {{ transaction.description }}
+    <app-transaction [transaction]="transaction"></app-transaction>
   </li>
 </ul>

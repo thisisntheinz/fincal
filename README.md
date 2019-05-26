@@ -1,5 +1,13 @@
 # Fincal
 
+## Overview
+
+This app will display a projected forecast of the daily balance based on future scheduled debits and credits for an account.
+
+This app will project an estimated forecast of future debits and credits based on the  transaction history for an account.
+
+This app will connect to bank accounts as a source of transaction history.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
 ## Development server

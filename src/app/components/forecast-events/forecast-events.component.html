@@ -1,0 +1,8 @@
+<p>
+  {{ this.events.length }} events works!
+</p>
+<ul>
+  <li *ngFor="let event of events">
+    <app-forecast-event [event]="event"></app-forecast-event>
+  </li>
+</ul>

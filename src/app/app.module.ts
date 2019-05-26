@@ -6,13 +6,15 @@ import { FincalRoutingModule } from './fincal-routing.module';
 import { TransactionComponent } from './components/transaction/transaction.component';
 import { TransactionsComponent } from './components/transactions/transactions.component';
 import { ForecastEventComponent } from './components/forecast-event/forecast-event.component';
+import { ForecastEventsComponent } from './components/forecast-events/forecast-events.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TransactionComponent,
     TransactionsComponent,
-    ForecastEventComponent
+    ForecastEventComponent,
+    ForecastEventsComponent
   ],
   imports: [
     BrowserModule,
