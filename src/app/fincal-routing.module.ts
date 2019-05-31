@@ -4,8 +4,10 @@ import { TransactionComponent } from './components/transaction/transaction.compo
 import { TransactionsComponent } from './components/transactions/transactions.component';
 import { ForecastEventComponent } from './components/forecast-event/forecast-event.component';
 import { ForecastEventsComponent } from './components/forecast-events/forecast-events.component';
+import { ForecastComponent } from './components/forecast/forecast.component';
 
 const fincalRoutes: Routes = [
+  { path: 'forecast', component: ForecastComponent},
   { path: 'transaction', component: TransactionComponent },
   { path: 'transactions', component: TransactionsComponent },
   { path: 'forecast-event', component: ForecastEventComponent },

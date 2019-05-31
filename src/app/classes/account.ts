@@ -6,11 +6,11 @@ export class Account {
   id: string;
   name: string;
   notes: string;
-  history: Transaction[];
+  history: Transaction[] = [];
   type: AccountType;
   balance: number;
   plan: Calendar;
-  projection: ProjectedTransaction[];
+  projection: ProjectedTransaction[] = [];
   APR: number;
   toString(): string {
     return this.name;

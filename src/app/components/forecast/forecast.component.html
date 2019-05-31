@@ -1,0 +1,21 @@
+<div>
+  <input type="date" placeholder="Start Date..." [(ngModel)]="forecast.start" />
+  <input type="date" placeholder="End Date..." [(ngModel)]="forecast.end" />
+  <button (click)="run()">Run</button>
+</div>
+<table>
+  <ng-container *ngFor="let event of forecast.events">
+    <ng-container *ngIf="(show == event) && event.transactions.length > 1">
+      <tr *ngFor="let trans of event.transactions">
+        <td>{{ trans.amount | currency }}</td>
+        <td></td>
+        <td>{{ trans.description }}</td>
+      </tr>
+    </ng-container>
+    <tr>
+      <td>{{ event.balance | currency }}</td>
+      <td>{{ event.when | date : 'shortDate' }}</td>
+      <td (click)="show = show == event ? null : event">{{ event.summary }}</td>
+    </tr>
+  </ng-container>
+</table>
